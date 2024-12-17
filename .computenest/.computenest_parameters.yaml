@@ -1,0 +1,18 @@
+SecurityGroupPorts:
+- '1898'
+ServicePorts:
+- '1898'
+ServiceType: private
+ArtifactSourceType: SourceCode
+ImageId: '"{{resolve:oos:aliyun/services/computenest/images/aliyun_3_2104_docker_26}}"'
+ServiceBuildRegion: ap-southeast-1
+RepoName: LYH-RAIN/cv
+RegionId: cn-hangzhou
+RunCommand: curl -sSL https://resource.topiam.cn/2.0.0/quick_start.sh -o quick_start.sh
+  && bash quick_start.sh
+SourceCodePath: .
+CommandTimeout: 3600
+CustomParameters: ''
+Owner: LYH-RAIN
+Branch: main
+Platform: github
